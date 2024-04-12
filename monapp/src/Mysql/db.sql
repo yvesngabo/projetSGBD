@@ -1,0 +1,47 @@
+CREATE DATABASE IF NOT EXISTS projetsgbd;
+
+USE projetsgbd;
+
+CREATE TABLE IF NOT EXISTS responsable (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  email VARCHAR(255) NOT NULL,
+  password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS administrateur (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  email VARCHAR(255) NOT NULL,
+  password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS etudiant (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nom VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  password VARCHAR(255) NOT NULL
+);
+
+
+CREATE TABLE CahierDeTexte (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    date DATE NOT NULL,
+    heure TIME NOT NULL,
+    professeur VARCHAR(100) NOT NULL,
+    matiere VARCHAR(100) NOT NULL,
+    contenu TEXT
+);
+
+CREATE TABLE SuiviEnseignant (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    date DATE NOT NULL,
+    enseignant VARCHAR(100) NOT NULL,
+    activite VARCHAR(255) NOT NULL,
+    remarques TEXT
+);
+
+CREATE TABLE AvisEtudiant (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    enseignant VARCHAR(100) NOT NULL,
+    matiere VARCHAR(100) NOT NULL,
+    avis TEXT NOT NULL
+);

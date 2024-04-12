@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport de suivi des enseignants</title>
+ <style>body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="date"],
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cahier de suivi des enseignants</h1>
+        <form id="suivi-form">
+            <div class="form-group">
+                <label for="date">Date :</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="enseignant">Nom de l'enseignant :</label>
+                <input type="text" id="enseignant" name="enseignant" required>
+            </div>
+            <div class="form-group">
+                <label for="activite">Activité :</label>
+                <input type="text" id="activite" name="activite" required>
+            </div>
+            <div class="form-group">
+                <label for="remarques">Remarques :</label>
+                <textarea id="remarques" name="remarques" rows="4"></textarea>
+            </div>
+            <button type="submit">Enregistrer</button>
+        </form>
+    </div>
+</body>
+</html>
